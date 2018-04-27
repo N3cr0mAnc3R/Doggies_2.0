@@ -1,0 +1,38 @@
+﻿@using System.Web.Optimization;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="webApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>наш большой магазин</title>
+    @Styles.Render("~/Content/css")
+    <base href="/" />
+</head>
+<body>
+    <nav>
+        <div ng-if="user">
+            <span>{{user.UserName}}</span>
+        </div>
+    </nav>
+    <div id="web-app">
+        <div id="system-messages-wrapper" ng-if="messages.length > 0">
+            <div class="messages-container">
+                <div class="message" ng-repeat="message in messages" sys-message-auto-remove ng-class="'message-' + message.Type" ng-model="message">
+                    <div class="body">{{message.Body}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="page" ng-view>
+
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/assets")
+    @Scripts.Render("~/bundles/application")
+</body>
+</html>

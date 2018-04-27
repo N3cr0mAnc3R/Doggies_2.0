@@ -1,0 +1,27 @@
+﻿#system-messages-wrapper {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+}
+#system-messages-wrapper .messages-container .message {
+  padding: 20px;
+  color: #999;
+  margin-bottom: 3px;
+  background: #fff;
+  border: 2px solid #999;
+  margin: 2px;
+}
+#system-messages-wrapper .messages-container .message.message-Error {
+  border-color: #c81d1d;
+  color: #c81d1d;
+}
+#system-messages-wrapper .messages-container .message.message-Success {
+  border-color: #139a3f;
+  color: #139a3f;
+}
+#system-messages-wrapper .messages-container .message .remove {
+  float: right;
+  cursor: pointer;
+}

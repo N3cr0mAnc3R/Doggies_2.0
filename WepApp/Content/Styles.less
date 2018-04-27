@@ -1,0 +1,36 @@
+﻿@error-color: #c81d1d;
+@success-color: #139a3f;
+
+#system-messages-wrapper {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+
+    .messages-container {
+        .message {
+            padding: 20px;
+            color: #999;
+            margin-bottom: 3px;
+            background: #fff;
+            border: 2px solid #999;
+            margin: 2px;
+
+            &.message-Error {
+                border-color: @error-color;
+                color: @error-color;
+            }
+
+            &.message-Success {
+                border-color: @success-color;
+                color: @success-color;
+            }
+
+            .remove {
+                float: right;
+                cursor: pointer;
+            }
+        }
+    }
+}

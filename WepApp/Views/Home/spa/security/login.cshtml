@@ -1,0 +1,10 @@
+﻿<div ng-if="!user">
+    <label>Login:</label>
+    <input type="text" class="form-control" ng-model="login" />
+    <label>Password:</label>
+    <input type="password" class="form-control" ng-model="password" />
+    <button ng-click="tryLogin(login, password)">Войти</button>
+
+    <input type="button" class="btn btn-primary" ng-click="VKLogin()" value="Vk" />
+</div>
+<div ng-if="user">{{user.UserName}} <input type="button" class="btn btn-primary" value="Выйти" ng-click="logout()" /></div>
